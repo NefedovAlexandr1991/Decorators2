@@ -11,7 +11,7 @@ phone_pattern = re.compile(
     r"(?:\s*\(?доб\.?\s*(\d+)\)?)?"
 )
 
-@logger('main.log')
+@logger('main2.log')
 def format_phone(phone):
     if not phone:
         return ""
@@ -33,7 +33,7 @@ def format_phone(phone):
 
     return result
 
-@logger('main.log')
+@logger('main2.log')
 def find_doubles(contacts_list):
     i = 0
     numbers = []
@@ -54,7 +54,7 @@ def find_doubles(contacts_list):
         i = i + 1
     return new
 
-@logger('main.log')
+@logger('main2.log')
 def del_doubles(numbers, contacts_list):
     #for item0 in numbers:
     for index, item in enumerate(contacts_list[numbers[0]]):
